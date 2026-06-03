@@ -997,14 +997,10 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   text-align: center;
   letter-spacing: 4px;
   white-space: nowrap;
-  
-
   text-shadow: 0 0 10px #23f0ff,
                0 0 20px #23f0ff,
                0 0 40px #159faa,
                0 0 80px #159faa;
-               
-
   opacity: 0;
 }
 
@@ -1012,6 +1008,7 @@ body:not(.not-loaded) .glowing-text {
   animation: fadeInText 3.5s ease-in-out forwards;
   animation-delay: 1.2s; 
 }
+
 @keyframes fadeInText {
   0% {
     opacity: 0;
@@ -1020,5 +1017,22 @@ body:not(.not-loaded) .glowing-text {
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flowers {
+    position: absolute;
+    bottom: 25vmin; 
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.3); 
+    transform-origin: bottom center;
+  }
+
+  .glowing-text {
+    top: 20%; 
+    font-size: 6vw; 
+    white-space: normal; 
+    width: 90%; 
   }
 }
